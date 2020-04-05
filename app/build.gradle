@@ -35,6 +35,7 @@ android {
         jvmTarget = "1.8"
     }
 
+    dynamicFeatures = [":dynamicfeature_test"]
 }
 
 dependencies {
@@ -46,6 +47,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
+
+    // needs to be added in app/build.gradle to download and
+    // install the module and in dynamicfeature_test/build.gradle to load the resources after the installation.
+    implementation 'com.google.android.play:core:1.7.2'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

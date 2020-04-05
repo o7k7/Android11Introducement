@@ -1,2 +1,3 @@
 rootProject.name='Introducement'
 include ':app'
+include ':dynamicfeature_test'
